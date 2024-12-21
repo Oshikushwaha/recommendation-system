@@ -118,8 +118,8 @@ Requirements:
 Instructions:
 
 ```python
-git clone https://github.com/Oshikushwaha/amazon-product-recommendation.git
-cd amazon-product-recommendation
+git clone https://github.com/Oshikushwaha/recommendation-system.git
+cd recommendation-system
 pip install -r requirements.txt
 ```
 
