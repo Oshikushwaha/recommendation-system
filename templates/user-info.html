@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="./assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>UserInfo Form</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="./assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="./assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="./assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="./assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="./assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <div class="loading" id="customLoader"></div>
+
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+      
+        <!-- Layout container -->
+        <div class="layout-page">
+        
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y" style="max-width: 50%;">
+              <div class="row">
+                <div class="col-md-12">
+                
+                  <div class="card mb-4">
+                    <h5 class="card-header">Please answer the following questions.</h5>
+                    <!-- Account -->
+                  
+                    <hr class="my-0" />
+                    <div class="card-body">
+                      <form id="formAccountSettings" method="POST" onsubmit="return false">
+                        <div class="row">
+                          <div class="mb-3 col-md-6">
+                            <label for="firstName"  class="form-label">First Name</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="first_name" name="first_name"
+                              value=""
+                              autofocus
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="last_name" class="form-label">Last Name</label>
+                            <input class="form-control" type="text" id="last_name" name="last_name"  value="" />
+                          </div>
+                         
+                          <div class="mb-3 col-md-6">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="city" class="form-label">City</label>
+                            <input class="form-control" type="text" id="city" name="city" placeholder="" />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="country" class="form-label">Country</label>
+                            <input class="form-control" type="text" id="country" name="country" placeholder="" />
+                          </div>
+
+                          <hr>
+                          <div class="mb-3 col-md-12">
+                            <h6 class="">Did you participate in a similar study before?</h6>
+                            <div class="form-check">
+                              <label for="old_user_yes"><input class="form-check-input" type="radio" name="old_user_id" id="old_user_yes" value="yes" required> Yes</label>
+                            </div>
+                            <div class="form-check">
+                              <label for="old_user_no"><input class="form-check-input" type="radio" name="old_user_id" id="old_user_no" value="no" required> No</label>
+                            </div>
+                          </div>
+
+
+                          <hr>
+                          <div class="mb-3 col-md-12">
+                            <h6 class="">What is your gender?</h6>
+                            <div class="form-check">
+                              <input  class="form-check-input" name ="gender" type="radio" value="male" id="gender_male" >
+                              <label class="form-check-label" for="gender_male"> Male </label>
+                            </div>
+                            <div class="form-check">
+                              <input  class="form-check-input" name ="gender" type="radio" value="female" id="gender_female" >
+                              <label class="form-check-label" for="gender_female"> Female </label>
+                            </div>
+                            <div class="form-check">
+                              <input  class="form-check-input" name ="gender" type="radio" value="other" id="gender_other" >
+                              <label class="form-check-label" for="gender_other"> Other </label>
+                            </div>
+
+                          </div>
+
+                          <hr>
+                            <div class="mb-3 col-md-6">
+                              <h6 class="">How old are you?</h6>
+                              <label for="age">Your Age:</label>
+                              <input  class="form-control" type="number" id="age" name="age" required>
+                              </div>
+
+
+                              <hr>
+                              <div class="mb-3 col-md-12">
+                                <h6 class="">Are you a native English speaker?
+                                </h6>
+                                <div class="form-check">
+                                  <input  class="form-check-input" name="native" id="native_yes" value="y"  type="radio" >
+                                  <label class="form-check-label" for="native_yes"> Yes </label>
+                                </div>
+
+                                <div class="form-check">
+                                  <input class="form-check-input" name="native" id="native_no" value="n"  type="radio" >
+                                  <label class="form-check-label" for="native_no"> No </label>
+                                </div>
+                              </div>
+
+                              <hr>
+                              <div class="mb-3 col-md-12">
+                                <h6 class="">Have you used any recommendation systems before?
+                                </h6>
+                                <div class="form-check">
+                                  <input  name="used" id="used_yes" value="y" required class="form-check-input" type="radio" >
+                                  <label class="form-check-label" for="used_yes"> Yes </label>
+                                </div>
+
+                                <div class="form-check">
+                                  <input name="used" id="used_no" value="n" required class="form-check-input"  type="radio" >
+                                  <label class="form-check-label" for="used_no"> No </label>
+                                </div>
+                              </div>
+
+
+                              <hr>
+                              <div class="mb-3 col-md-12">
+                               
+
+                                <h5>How familiar are you with recommendation systems and how they work?</h5>
+                                <h6>Please rate based on the following criteria:</h6>
+                                <div class="form-check">
+                                  <label for="familiar_1"><input type="radio" name="familiar" class="form-check-input" id="familiar_1" value="1" required> 1 (Not at all)</label>
+                                </div>
+                                <div class="form-check">
+                                  <label for="familiar_2"><input type="radio" name="familiar"  class="form-check-input" id="familiar_2" value="2" required> 2</label>
+                                </div>
+                                <div class="form-check">
+                                  <label for="familiar_3"><input type="radio" name="familiar"  class="form-check-input" id="familiar_3" value="3" required> 3</label>
+                                </div>
+                                <div class="form-check">
+                                  <label for="familiar_4"><input type="radio" name="familiar"  class="form-check-input" id="familiar_4" value="4" required> 4</label>
+                                </div>
+                                <div class="form-check">
+                                  <label for="familiar_5"><input type="radio" name="familiar"  class="form-check-input" id="familiar_5" value="5" required> 5 (Extremely)</label>
+                                </div>
+
+                              </div>
+                                  
+
+
+                         
+                        </div>
+                        <div class="mt-2">
+                          <button type="button" onclick="submitForm()"  class="btn btn-primary me-2">Submit</button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- /Account -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- / Content -->
+
+        
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="./assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="./assets/vendor/libs/popper/popper.js"></script>
+    <script src="./assets/vendor/js/bootstrap.js"></script>
+    <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="./assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="./assets/js/pages-account-settings-account.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+
+  <script>
+    function submitForm() {
+
+      const storedUserId = localStorage.getItem('user_id');
+
+      // Gather form data
+      const formData = {
+        user_id: storedUserId,
+        first_name: document.getElementById('first_name').value,
+        last_name: document.getElementById('last_name').value,
+        address: document.getElementById('address').value,
+        city: document.getElementById('city').value,
+        country: document.getElementById('country').value,
+        old_user_id: document.querySelector('input[name="old_user_id"]:checked').value,
+        gender: document.querySelector('input[name="gender"]:checked').value,
+        age: document.getElementById('age').value,
+        native: document.querySelector('input[name="native"]:checked').value,
+        used: document.querySelector('input[name="used"]:checked').value,
+        familiar: document.querySelector('input[name="familiar"]:checked').value,
+      };
+
+      
+
+      if (storedUserId) {
+            console.log('User ID retrieved from localStorage:', storedUserId);
+            // You can use storedUserId as needed in your script
+      } else {
+            console.log('No user ID found in localStorage');
+            // If user_id is not found, you may want to set it or take appropriate action
+      }
+
+      // Replace 'YOUR_API_ENDPOINT' with your actual API endpoint
+      const apiEndpoint = 'http://127.0.0.1:5000/user-info';
+
+      $('div#customLoader').show();
+
+      // Send data to API endpoint (you can use fetch or another AJAX method)
+      fetch(apiEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then(response => response.json())
+        .then(data => {
+          // $('div#customLoader').hide();
+          console.log('API response:', data);
+          // Handle the response from the API as needed
+
+          // Check if the API response indicates success
+          if (data.success) {
+            submitTimer();
+            setTimeout(() => {
+                    $('div#customLoader').hide();
+                    window.location.href = 'display-product.html';
+                   }, 2000);
+
+              // Redirect to index.html upon success
+              window.location.href = 'display-product.html';
+          } else {
+              // Handle other cases if needed
+          }
+        })
+        .catch(error => {
+          $('div#customLoader').hide();
+          console.error('Error submitting form:', error);
+          // Handle errors here
+        });
+    }
+  </script>
+</html>
