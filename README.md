@@ -118,7 +118,7 @@ Requirements:
 Instructions:
 
 ```python
-git clone https://github.com/rsengar7/amazon-product-recommendation.git
+git clone https://github.com/Oshikushwaha/amazon-product-recommendation.git
 cd amazon-product-recommendation
 pip install -r requirements.txt
 ```
